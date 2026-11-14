@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  color-scheme: light;
+  --bg-app: #f1f5f9;
+  --bg-header: rgba(255, 255, 255, 0.9);
+  --bg-sidebar: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-surface-2: #f8fafc;
+  --bg-input: #ffffff;
+  --bg-subtle: #e2e8f0;
+  --border-main: #cbd5e1;
+  --border-subtle: #e2e8f0;
+  --text-main: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --scroll-thumb: #cbd5e1;
+  --scroll-thumb-hover: #94a3b8;
+}
+
+.dark {
+  color-scheme: dark;
+  --bg-app: #0b1120;
+  --bg-header: rgba(15, 23, 42, 0.9);
+  --bg-sidebar: #0d1424;
+  --bg-surface: #0f172a;
+  --bg-surface-2: #131c31;
+  --bg-input: #090f1d;
+  --bg-subtle: #1e293b;
+  --border-main: #334155;
+  --border-subtle: #1e293b;
+  --text-main: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --scroll-thumb: #334155;
+  --scroll-thumb-hover: #475569;
+}
+
+html,
+body {
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  font-family: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scroll-thumb);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scroll-thumb-hover);
+}
